@@ -11,6 +11,7 @@ const projects = [
       "Production Django app featuring OTP email registration, role-based dashboards (Patient/Doctor/Admin), Cashfree UPI payments, downloadable PDF prescriptions via ReportLab, and Chart.js analytics. Deployed on Render.",
     tags: ["Django", "SQLite", "REST API", "ReportLab", "Cashfree UPI", "Render"],
     github: "https://github.com/Nehaa2509/VitalBook",
+    demo: "https://vitalbook-1.onrender.com/",
     accent: "#EC4899",
     gradient:
       "linear-gradient(135deg, rgba(236,72,153,0.25), rgba(236,72,153,0.06), #0D0914)",
@@ -210,16 +211,16 @@ export default function Projects() {
                     </h3>
                     {/* External link arrow */}
                     <a
-                      href={project.github}
+                      href={project.demo || project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`View ${project.title} on GitHub`}
-                      className="flex-shrink-0 flex items-center justify-center rounded-full border transition-all duration-200 hover:bg-pink-500/10"
+                      aria-label={`View ${project.title} ${project.demo ? "Live Demo" : "on GitHub"}`}
+                      className="flex-shrink-0 flex items-center justify-center rounded-full border transition-all duration-200 hover:bg-pink-500/10 hover:border-pink-500/30"
                       style={{
                         width: 34,
                         height: 34,
                         borderColor: "rgba(255,255,255,0.1)",
-                        color: "#9D8BAA",
+                        color: project.demo ? "#EC4899" : "#9D8BAA",
                       }}
                     >
                       <svg
@@ -254,25 +255,58 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  {/* GitHub link */}
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-medium transition-colors duration-200 hover:underline"
-                    style={{ color: "#EC4899" }}
-                  >
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
+                  {/* Links */}
+                  <div className="flex items-center justify-between gap-2 pt-2 border-t border-white/5">
+                    {project.demo ? (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full transition-all duration-200 hover:opacity-90"
+                        style={{
+                          background: "rgba(236,72,153,0.15)",
+                          color: "#EC4899",
+                          border: "1px solid rgba(236,72,153,0.35)",
+                        }}
+                      >
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          aria-hidden="true"
+                        >
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                          <path d="M2 12h20" />
+                        </svg>
+                        Live Demo
+                      </a>
+                    ) : (
+                      <div />
+                    )}
+
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium transition-colors duration-200 hover:underline"
+                      style={{ color: "#EC4899" }}
                     >
-                      <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
-                    </svg>
-                    View Code on GitHub
-                  </a>
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
+                      </svg>
+                      View Code
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
