@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ─────────────────────────────────────── */
+:root {
+  --bg-deep: #0D0914;
+  --surface: #1A1425;
+  --surface-border: #2D1F3F;
+  --accent-pink: #EC4899;
+  --accent-fuchsia: #C084FC;
+  --text-primary: #FDF2F8;
+  --text-muted: #9D8BAA;
+  --glow-pink: rgba(236, 72, 153, 0.35);
+  --glow-fuchsia: rgba(192, 132, 252, 0.25);
+}
+
+/* ── Tailwind v4 @theme ────────────────────────────────── */
+@theme inline {
+  --color-deep: var(--bg-deep);
+  --color-surface: var(--surface);
+  --color-surface-border: var(--surface-border);
+  --color-accent: var(--accent-pink);
+  --color-accent-fuchsia: var(--accent-fuchsia);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --font-sans: var(--font-syne);
+  --font-body: var(--font-outfit);
+}
+
+/* ── Base ──────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-outfit, "Outfit", sans-serif);
+  overflow-x: hidden;
+}
+
+/* ── Custom Scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--accent-pink); border-radius: 3px; }
+
+/* ── Grain Overlay ─────────────────────────────────────── */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  opacity: 0.06;
+}
+
+/* ── Glassmorphism ─────────────────────────────────────── */
+.glass {
+  background: rgba(26, 20, 37, 0.65);
+  border: 1px solid var(--surface-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* ── Tag Pill ──────────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: rgba(236, 72, 153, 0.12);
+  border: 1px solid rgba(236, 72, 153, 0.25);
+  color: var(--accent-pink);
+  font-family: var(--font-outfit, "Outfit", sans-serif);
+  font-weight: 500;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.tag:hover {
+  background: rgba(236, 72, 153, 0.22);
+  border-color: rgba(236, 72, 153, 0.45);
+}
+
+/* ── Nav Link Underline ────────────────────────────────── */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--accent-pink);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ── Shimmer Text ──────────────────────────────────────── */
+.text-shimmer {
+  background: linear-gradient(90deg, #EC4899 0%, #C084FC 35%, #F9A8D4 50%, #C084FC 65%, #EC4899 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3.5s linear infinite;
+}
+
+/* ── Scroll Reveal ─────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Card Hover ────────────────────────────────────────── */
+.card-hover {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(236, 72, 153, 0.15);
+  border-color: rgba(236, 72, 153, 0.4) !important;
+}
+
+/* ── Bento Cell ────────────────────────────────────────── */
+.bento-cell {
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.bento-cell:hover {
+  background: rgba(236, 72, 153, 0.06) !important;
+  border-color: rgba(236, 72, 153, 0.3) !important;
+  transform: scale(1.015);
+}
+
+/* ── Magnetic Button ───────────────────────────────────── */
+.btn-mag {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.btn-mag::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,0.18) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.btn-mag:hover::before { opacity: 1; }
+.btn-mag:hover { transform: scale(1.03); }
+.btn-mag:active { transform: scale(0.97); }
+
+/* ── Profile Glow Ring ─────────────────────────────────── */
+.profile-glow {
+  box-shadow: 0 0 0 4px var(--bg-deep), 0 0 30px var(--glow-pink), 0 0 60px rgba(236,72,153,0.2);
+}
+
+/* ── Keyframes ─────────────────────────────────────────── */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(236,72,153,0.3); }
+  50% { box-shadow: 0 0 50px rgba(236,72,153,0.65); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes ping {
+  0% { transform: scale(1); opacity: 0.75; }
+  75%, 100% { transform: scale(2.2); opacity: 0; }
+}
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(236,72,153,0.3); }
+  50% { border-color: rgba(236,72,153,0.7); }
+}
+
+/* ── Utility animation classes ─────────────────────────── */
+.animate-fade-up { animation: fadeUp 0.7s ease forwards; }
+.animate-fade-up-d1 { animation: fadeUp 0.7s ease 0.12s forwards; }
+.animate-fade-up-d2 { animation: fadeUp 0.7s ease 0.24s forwards; }
+.animate-fade-up-d3 { animation: fadeUp 0.7s ease 0.36s forwards; }
+.animate-fade-up-d4 { animation: fadeUp 0.7s ease 0.48s forwards; }
+.animate-fade-in { animation: fadeIn 1s ease forwards; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-glow-pulse { animation: glowPulse 2.5s ease-in-out infinite; }
+.animate-shimmer { animation: shimmer 3.5s linear infinite; }
+.animate-ping-custom { animation: ping 1.5s cubic-bezier(0,0,0.2,1) infinite; }
+.animate-border-glow { animation: borderGlow 3s ease-in-out infinite; }
+
+/* ── Input Styles ──────────────────────────────────────── */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(13, 9, 20, 0.7);
+  border: 1px solid var(--surface-border);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-family: var(--font-outfit, "Outfit", sans-serif);
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+.form-input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+.form-input:focus {
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 0 3px rgba(236,72,153,0.15);
+}
+
+/* ── Reduced Motion ────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
