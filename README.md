@@ -4,7 +4,7 @@ Personal portfolio site for Sneha Rudani, a Python & Django Backend Developer.
 Showcases projects, skills, internship experience, and contact details for
 recruiters and hiring managers.
 
-**Live site:** [Add your Vercel URL here once deployed]
+**Live site:** [https://sneha-portfolio-woad-nine.vercel.app/]
 **Resume:** [sneharr25@gmail.com](mailto:sneharr25@gmail.com)
 
 ## About
