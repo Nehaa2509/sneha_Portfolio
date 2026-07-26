@@ -1,10 +1,24 @@
 "use client";
-
+import Image from "next/image";
 /* ──────────────────────────────────────────────────────────
    PROJECTS — Sneha Rudani's Django & Python Projects
    ────────────────────────────────────────────────────────── */
 
 const projects = [
+  {
+    title: "Wiwi Events — Event Management System",
+    summary:
+      "High-performance Event Management Platform built with Django and REST Framework. Features QR-code digital ticket passes, modern dark glassmorphism UI, and host moderation workflow.",
+    tags: ["Django", "REST API", "SQLite", "Render"],
+    image: "/wiwi-events.png", // Add your screenshot here
+    github: "https://github.com/Nehaa2509/Event_Management_System.git",
+    demo: "https://wiwievents.onrender.com",
+    accent: "#10B981",
+    gradient:
+      "linear-gradient(135deg, rgba(16,185,129,0.25), rgba(16,185,129,0.06), #0D0914)",
+    pattern: "radial",
+    featured: true,
+  },
   {
     title: "VitalBook — Hospital Appointment System",
     summary:
@@ -183,16 +197,27 @@ export default function Projects() {
                 className="relative overflow-hidden flex items-center justify-center"
                 style={{ height: 165, background: project.gradient }}
               >
-                {project.pattern === "grid" && (
-                  <GridPattern accent={project.accent} />
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <>
+                    {project.pattern === "grid" && (
+                      <GridPattern accent={project.accent} />
+                    )}
+                    {project.pattern === "radial" && (
+                      <RadialPattern accent={project.accent} />
+                    )}
+                    {project.pattern === "bars" && (
+                      <BarsPattern accent={project.accent} />
+                    )}
+                    <ProjectIcon accent={project.accent} />
+                  </>
                 )}
-                {project.pattern === "radial" && (
-                  <RadialPattern accent={project.accent} />
-                )}
-                {project.pattern === "bars" && (
-                  <BarsPattern accent={project.accent} />
-                )}
-                <ProjectIcon accent={project.accent} />
               </div>
 
               {/* Content */}
