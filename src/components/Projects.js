@@ -13,9 +13,9 @@ const projects = [
     image: "/wiwi-events.png", // Add your screenshot here
     github: "https://github.com/Nehaa2509/Event_Management_System.git",
     demo: "https://wiwievents.onrender.com",
-    accent: "#10B981",
+    accent: "#6366F1",
     gradient:
-      "linear-gradient(135deg, rgba(16,185,129,0.25), rgba(16,185,129,0.06), #0D0914)",
+      "linear-gradient(135deg, rgba(99,102,241,0.25), rgba(99,102,241,0.06), #0D0914)",
     pattern: "radial",
     featured: true,
   },
