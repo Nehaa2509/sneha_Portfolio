@@ -24,11 +24,12 @@ const projects = [
     summary:
       "Production Django app featuring OTP email registration, role-based dashboards (Patient/Doctor/Admin), Cashfree UPI payments, downloadable PDF prescriptions via ReportLab, and Chart.js analytics. Deployed on Render.",
     tags: ["Django", "SQLite", "REST API", "ReportLab", "Cashfree UPI", "Render"],
+    image: "/vitalbook.webp",
     github: "https://github.com/Nehaa2509/VitalBook",
     demo: "https://vitalbook-1.onrender.com/",
-    accent: "#EC4899",
+    accent: "#F97316",
     gradient:
-      "linear-gradient(135deg, rgba(236,72,153,0.25), rgba(236,72,153,0.06), #0D0914)",
+      "linear-gradient(135deg, rgba(249,115,22,0.25), rgba(249,115,22,0.06), #0D0914)",
     pattern: "grid",
     featured: true,
   },
