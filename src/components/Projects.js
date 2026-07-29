@@ -46,16 +46,17 @@ const projects = [
     featured: true,
   },
   {
-    title: "MyAwesomeCart — Django E-Commerce Portal",
+    title: "OQIREL — Django E-Commerce Portal",
     summary:
-      "Full-stack Django e-commerce platform with dynamic product catalog, real-time cart state management, checkout pipeline, order tracking system, product filtering, and admin inventory control.",
-    tags: ["Django", "Python", "SQLite", "JavaScript", "Cart API"],
-    github: "https://github.com/Nehaa2509",
+      "Boutique e-commerce platform for handcrafted ambient accords & botanical skincare with dynamic category slideshows, glassmorphic UI, Razorpay payments, order tracking, and PDF invoice generation.",
+    tags: ["Django", "REST API", "Razorpay", "ReportLab", "Render"],
+    github: "https://github.com/Nehaa2509/oqirel-project.git",
+    demo: "https://oqirel-project.onrender.com",
     accent: "#C084FC",
     gradient:
       "linear-gradient(135deg, rgba(192,132,252,0.25), rgba(192,132,252,0.06), #0D0914)",
     pattern: "radial",
-    featured: false,
+    featured: true,
   },
   {
     title: "TextUtils — Django Text Processing App",

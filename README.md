@@ -36,7 +36,7 @@ and ML models. Immediately available for Python/Django Developer roles.
 | [VitalBook](https://github.com/Nehaa2509/VitalBook-) | Full-stack hospital appointment platform — JWT auth, Cashfree UPI payments, OTP-verified registration, PDF prescriptions, admin analytics dashboard. Live on Render. | Django, DRF, JWT, SQLite, Chart.js, ReportLab |
 | [Gemini Science Voice Chatbot](https://github.com/Nehaa2509/Gemini-Science-Voice-Chatbot) | Conversational AI agent using Google Gemini API, 15+ query categories, layered error handling, <2% failure rate. | Python, Gemini API, Speech Recognition, TTS |
 | ML Model Benchmark Suite | Compares ML algorithms (KNN, Logistic Regression, Random Forest) across benchmark datasets. | Python, Scikit-learn, Pandas |
-| MyAwesomeCart | Full-stack Django e-commerce platform — product catalog, cart, checkout, order tracking, admin inventory control. | Django, Python, SQLite, JavaScript |
+| [OQIREL](https://oqirel-project.onrender.com) | Boutique Django e-commerce platform — ambient accords, botanical skincare, glassmorphic UI, Razorpay payments, PDF invoices, order tracking. | Django, Python, REST API, ReportLab, Render |
 | TextUtils | Django text processing app — real-time text analysis, punctuation/case handling, character counting. | Django, Python, HTML5/CSS3 |
 
 ## Running Locally
