@@ -34,6 +34,20 @@ const projects = [
     featured: true,
   },
   {
+    title: "OQIREL — Django E-Commerce Portal",
+    summary:
+      "Boutique e-commerce platform for handcrafted ambient accords & botanical skincare with dynamic category slideshows, glassmorphic UI, Razorpay payments, order tracking, and PDF invoice generation.",
+    tags: ["Django", "REST API", "Razorpay", "ReportLab", "Render"],
+    image: "/oqireal.png",
+    github: "https://github.com/Nehaa2509/oqirel-project.git",
+    demo: "https://oqirel-project.onrender.com",
+    accent: "#C084FC",
+    gradient:
+      "linear-gradient(135deg, rgba(192,132,252,0.25), rgba(192,132,252,0.06), #0D0914)",
+    pattern: "radial",
+    featured: true,
+  },
+  {
     title: "Gemini Science Voice Chatbot",
     summary:
       "Conversational AI bot integrating Google Gemini API with speech recognition and text-to-speech for real-time scientific Q&A across 15+ query categories with <2% failure rate.",
@@ -43,19 +57,6 @@ const projects = [
     gradient:
       "linear-gradient(135deg, rgba(251,191,36,0.2), rgba(251,191,36,0.05), #0D0914)",
     pattern: "grid",
-    featured: true,
-  },
-  {
-    title: "OQIREL — Django E-Commerce Portal",
-    summary:
-      "Boutique e-commerce platform for handcrafted ambient accords & botanical skincare with dynamic category slideshows, glassmorphic UI, Razorpay payments, order tracking, and PDF invoice generation.",
-    tags: ["Django", "REST API", "Razorpay", "ReportLab", "Render"],
-    github: "https://github.com/Nehaa2509/oqirel-project.git",
-    demo: "https://oqirel-project.onrender.com",
-    accent: "#C084FC",
-    gradient:
-      "linear-gradient(135deg, rgba(192,132,252,0.25), rgba(192,132,252,0.06), #0D0914)",
-    pattern: "radial",
     featured: true,
   },
   {
