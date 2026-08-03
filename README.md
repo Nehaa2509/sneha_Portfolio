@@ -37,7 +37,7 @@ and ML models. Immediately available for Python/Django Developer roles.
 | [Gemini Science Voice Chatbot](https://github.com/Nehaa2509/Gemini-Science-Voice-Chatbot) | Conversational AI agent using Google Gemini API, 15+ query categories, layered error handling, <2% failure rate. | Python, Gemini API, Speech Recognition, TTS |
 | ML Model Benchmark Suite | Compares ML algorithms (KNN, Logistic Regression, Random Forest) across benchmark datasets. | Python, Scikit-learn, Pandas |
 | [OQIREL](https://oqirel-project.onrender.com) | Boutique Django e-commerce platform — ambient accords, botanical skincare, glassmorphic UI, Razorpay payments, PDF invoices, order tracking. | Django, Python, REST API, ReportLab, Render |
-| TextUtils | Django text processing app — real-time text analysis, punctuation/case handling, character counting. | Django, Python, HTML5/CSS3 |
+| [TextUtils](https://github.com/Nehaa2509/TextUtlies.git) | Django text processing app — real-time text analysis, punctuation/case handling, character counting. Live on Render: [Demo](https://textutlies.onrender.com/). | Django, Python, HTML5/CSS3 |
 
 ## Running Locally
 

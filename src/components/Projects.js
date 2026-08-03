@@ -64,12 +64,14 @@ const projects = [
     summary:
       "Fast Django web application for real-time text analysis, punctuation removal, uppercase conversion, character counting, and whitespace optimization.",
     tags: ["Django", "Python", "HTML5/CSS3", "Text Analysis"],
-    github: "https://github.com/Nehaa2509",
+    image: "/textutiiles3.png",
+    github: "https://github.com/Nehaa2509/TextUtlies.git",
+    demo: "https://textutlies.onrender.com/",
     accent: "#F472B6",
     gradient:
       "linear-gradient(135deg, rgba(244,114,182,0.2), rgba(244,114,182,0.05), #0D0914)",
     pattern: "bars",
-    featured: false,
+    featured: true,
   },
   {
     title: "ML Model Benchmark Suite",
