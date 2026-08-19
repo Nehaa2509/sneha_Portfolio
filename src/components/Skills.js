@@ -71,13 +71,12 @@ const experiences = [
     period: "June – July 2026",
     badge: "Back-End Certified",
     bullets: [
-      "Built Django REST Framework APIs with JWT authentication for user management and data operations.",
-      "Tested REST API endpoints and validated backend logic, identifying and resolving defects to ensure reliable data flow.",
-      "Designed RESTful endpoints with secure token-based access control across multiple modules.",
+      "Developed a Django job-listing application — models, views, and session-based authentication — independently from a task brief.",
+      "Completed a Django event-registration application as a second assigned task, covering core CRUD functionality.",
     ],
   },
   {
-    role: "Python Developer Intern",
+    role: "Python Developer Trainee",
     company: "Software Education",
     location: "Nikol, Ahmedabad (Part-time, On-site)",
     period: "Jan – Apr 2026",

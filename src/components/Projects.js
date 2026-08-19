@@ -22,8 +22,8 @@ const projects = [
   {
     title: "VitalBook — Hospital Appointment System",
     summary:
-      "Production Django app featuring OTP email registration, role-based dashboards (Patient/Doctor/Admin), Cashfree UPI payments, downloadable PDF prescriptions via ReportLab, and Chart.js analytics. Deployed on Render.",
-    tags: ["Django", "SQLite", "REST API", "ReportLab", "Cashfree UPI", "Render"],
+      "Production Django app featuring OTP email registration, role-based dashboards (Patient/Doctor/Admin), Cashfree payment gateway integration (UPI flow), downloadable PDF prescriptions via ReportLab, and Chart.js analytics. Deployed on Render.",
+    tags: ["Django", "SQLite", "REST API", "ReportLab", "Cashfree", "Render"],
     image: "/vitalbook.webp",
     github: "https://github.com/Nehaa2509/VitalBook",
     demo: "https://vitalbook-1.onrender.com/",
