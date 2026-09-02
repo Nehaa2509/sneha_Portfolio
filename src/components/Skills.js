@@ -68,47 +68,99 @@ const experiences = [
     role: "Python & Django Developer Intern",
     company: "Wiwi Tech Pvt Ltd",
     period: "Jan 2026 – Present",
-    location: "Ahmedabad, India",
+    location: "Ahmedabad, India · On-site / Hybrid",
     badge: "Active Internship",
+    skills: ["Django", "Django REST Framework", "JWT", "SQLite", "ORM", "API Design"],
     bullets: [
       "Engineered backend REST APIs for the Wiwi Events platform using Django REST Framework (DRF), structuring database ORM models and schema migrations.",
       "Implemented JWT authentication, QR-code digital ticket pass verification, and host approval moderation workflows.",
-      "Collaborated on frontend UI integration using glassmorphic dark-theme design patterns.",
+      "Collaborated on frontend UI integration using glassmorphic dark-theme design patterns and postman endpoint testing.",
     ],
   },
   {
-    role: "Python Developer Trainee",
+    role: "Back-End Development Intern",
+    company: "QSkill",
+    period: "Jun 2026 – Jul 2026",
+    location: "Navi Mumbai, India · Remote",
+    badge: "ISO 9001:2015 Certified",
+    certificateImage: "/certificates/qskill-backend-internship.png",
+    certificatePdf: "/certificates/qskill-backend-internship.pdf",
+    skills: ["Python", "Back-End Architecture", "API Optimization", "Database Workflows"],
+    bullets: [
+      "Designed, optimized, and implemented scalable server-side logic and database workflows to enhance backend application performance.",
+      "Maintained clean, structured, and modular code standards to ensure high maintainability and smooth feature integration.",
+      "Collaborated in a remote environment to document workflows, troubleshoot technical issues, and deliver milestones on schedule.",
+    ],
+  },
+  {
+    role: "AI & ML Intern",
+    company: "Elevate Labs",
+    period: "Jan 2026 – Apr 2026",
+    location: "Bengaluru, India · Remote",
+    badge: "MSME & Skill India",
+    certificateImage: "/certificates/elevate-labs-ai-ml.png",
+    skills: ["Machine Learning", "Data Preprocessing", "Model Evaluation", "Pandas", "Scikit-Learn"],
+    bullets: [
+      "Completed 4-month AI/ML program covering end-to-end machine learning workflows: data preprocessing, feature engineering, training, and evaluation.",
+      "Applied predictive analytics models (KNN, Random Forest, Logistic Regression) to derive actionable insights from structured datasets.",
+      "Recognized by Ministry of MSME (Govt. of India) and Skill India with verified Certificate of Completion.",
+    ],
+  },
+  {
+    role: "Python Developer Intern",
     company: "Software Education",
     period: "Jan 2026 – Apr 2026",
-    location: "Nikol, Ahmedabad (On-site)",
-    badge: "Certified Internship",
+    location: "Nikol, Ahmedabad · On-site",
+    badge: "3-Month On-site",
+    certificateImage: "/certificates/software-education-internship.png",
+    skills: ["Python OOP", "Algorithm Optimization", "Data Handling", "Scripting"],
     bullets: [
-      "Delivered backend logic and data-handling scripts in Python using OOP design.",
-      "Optimized script execution efficiency and documented workflows for team handoff.",
-      "Successfully completed full 3-month on-site development training with verified certificate.",
+      "Engineered robust data solutions and backend processes in Python, focusing on Object-Oriented Programming (OOP) and algorithmic problem-solving.",
+      "Conducted data processing pipelines and optimized algorithm performance to improve script execution efficiency.",
+      "Maintained project documentation and code quality standards throughout the dedicated 3-month on-site internship.",
+    ],
+  },
+  {
+    role: "Hackathon Participant",
+    company: "Internal Smart India Hackathon 2025",
+    period: "Sep 2025",
+    location: "Apollo Institute, Ahmedabad · On-site",
+    badge: "MoE's Innovation Cell (MIC)",
+    certificateImage: "/certificates/smart-india-hackathon.png",
+    certificatePdf: "/certificates/smart-india-hackathon.pdf",
+    skills: ["Rapid Prototyping", "Team Collaboration", "System Design", "Problem Solving"],
+    bullets: [
+      "Competed in the intensive national-level innovation hackathon organized under the Ministry of Education's Innovation Cell (Govt. of India) and AICTE.",
+      "Collaborated with a team to brainstorm, architect, and prototype a technology-driven software solution for a real-world problem statement.",
+      "Presented engineering architecture and live prototype demonstration to an expert evaluation panel of industry judges.",
+    ],
+  },
+  {
+    role: "Artificial Intelligence Intern",
+    company: "CSRBOX Foundation & GTU",
+    period: "Jul 2025",
+    location: "Ahmedabad, India · Remote",
+    badge: "GTU Summer Initiative",
+    certificateImage: "/certificates/csrbox-ai-internship.png",
+    certificatePdf: "/certificates/csrbox-ai-internship.pdf",
+    skills: ["Artificial Intelligence", "ML Frameworks", "Intelligent Systems", "GTU Subject 3170001"],
+    bullets: [
+      "Completed Summer GTU Internship Program (Subject Code: 3170001) in Artificial Intelligence concepts and intelligent system design.",
+      "Bridged university theoretical foundations with corporate AI standards, developing intelligent logic and prototype models.",
     ],
   },
   {
     role: "Data Science Intern",
     company: "CloudThat Technologies",
-    period: "June 2025 – July 2025",
-    location: "Remote",
+    period: "Jun 2025 – Jul 2025",
+    location: "Bengaluru, India · Remote",
     badge: "Microsoft Data & AI Program",
+    certificateImage: "/certificates/microsoft-data-ai.png",
+    certificatePdf: "/certificates/microsoft-data-ai.pdf",
+    skills: ["Data Analytics", "Azure AI", "EDA", "NumPy & Pandas", "Cloud Workflows"],
     bullets: [
-      "Completed 78 hours of skill-based training under the Microsoft Data & AI Internship Program 2025.",
-      "Conducted exploratory data analysis (EDA), data cleaning, and preprocessing with Pandas & NumPy.",
-      "Trained and evaluated classification models (Logistic Regression, KNN, Random Forest) for predictive metrics comparison.",
-    ],
-  },
-  {
-    role: "AI Intern",
-    company: "CSRBOX Foundation & GTU",
-    period: "July 2025",
-    location: "Ahmedabad, India",
-    badge: "Summer GTU Program",
-    bullets: [
-      "Engaged in hands-on AI problem-solving workshops and machine learning model training as part of the Gujarat Technological University summer initiative.",
-      "Delivered a real-world applied AI project prototype with structured documentation and metrics.",
+      "Completed 78 hours of intensive skill-based training under the Microsoft Data & AI Internship Program 2025 powered by CloudThat.",
+      "Engaged in hands-on labs focused on exploratory data analysis (EDA), classification models, and cloud-based AI pipelines.",
     ],
   },
 ];
@@ -334,66 +386,110 @@ export default function Skills() {
 
         {/* Experience & Certifications Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-6">
-          {/* Detailed Internships Timeline */}
-          <div className="glass rounded-2xl p-7 space-y-6 reveal border border-white/10">
-            <div className="flex items-center justify-between gap-3">
-              <div className="flex items-center gap-3">
-                <span className="w-3 h-3 rounded-full bg-pink-500 animate-pulse" />
-                <h3
-                  className="font-bold text-white text-xl"
-                  style={{ fontFamily: "var(--font-syne), sans-serif" }}
-                >
-                  Internship Experience
-                </h3>
+          {/* Detailed Internships & Experience Timeline */}
+          <div className="glass rounded-2xl p-7 space-y-6 reveal border border-white/10 flex flex-col justify-between">
+            <div className="space-y-6">
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <span className="w-3 h-3 rounded-full bg-pink-500 animate-pulse" />
+                  <h3
+                    className="font-bold text-white text-xl"
+                    style={{ fontFamily: "var(--font-syne), sans-serif" }}
+                  >
+                    Experience &amp; Internships
+                  </h3>
+                </div>
+                <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-pink-500/10 text-pink-400 border border-pink-500/20">
+                  7 Verified Roles
+                </span>
               </div>
-              <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-pink-500/10 text-pink-400 border border-pink-500/20">
-                4 Roles Completed
-              </span>
-            </div>
 
-            <div className="space-y-8">
-              {experiences.map((exp) => (
-                <div
-                  key={exp.role + exp.company}
-                  className="space-y-3 pl-4 border-l-2 border-pink-500/40 relative"
-                >
-                  <div className="space-y-1">
-                    <div className="flex flex-wrap justify-between items-baseline gap-2">
-                      <h4 className="font-semibold text-white text-base">
-                        {exp.role}{" "}
-                        <span style={{ color: "#EC4899" }}>@ {exp.company}</span>
-                      </h4>
-                      <span
-                        className="text-xs font-mono"
-                        style={{ color: "#9D8BAA" }}
-                      >
-                        {exp.period}
-                      </span>
+              <div className="space-y-7">
+                {experiences.map((exp) => (
+                  <div
+                    key={exp.role + exp.company}
+                    className="space-y-3 pl-4 border-l-2 border-pink-500/40 relative group"
+                  >
+                    {/* Glowing bullet indicator on timeline */}
+                    <div className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-pink-500 group-hover:scale-125 group-hover:bg-pink-400 transition-transform" />
+
+                    <div className="space-y-1">
+                      <div className="flex flex-wrap justify-between items-baseline gap-2">
+                        <h4 className="font-semibold text-white text-base group-hover:text-pink-300 transition-colors">
+                          {exp.role}{" "}
+                          <span style={{ color: "#EC4899" }}>@ {exp.company}</span>
+                        </h4>
+                        <span
+                          className="text-xs font-mono px-2 py-0.5 rounded bg-white/5"
+                          style={{ color: "#9D8BAA" }}
+                        >
+                          {exp.period}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 text-xs flex-wrap" style={{ color: "#9D8BAA" }}>
+                        <span>{exp.location}</span>
+                        <span>•</span>
+                        <span className="text-purple-300 font-mono text-[0.7rem] px-2 py-0.5 rounded bg-purple-500/10 border border-purple-500/20">
+                          {exp.badge}
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-xs" style={{ color: "#9D8BAA" }}>
-                      <span>{exp.location}</span>
-                      <span>•</span>
-                      <span className="text-purple-300 font-mono">{exp.badge}</span>
+
+                    <ul className="space-y-2 pt-1">
+                      {exp.bullets.map((bullet, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-start gap-2.5 text-xs leading-relaxed"
+                          style={{ color: "#9D8BAA" }}
+                        >
+                          <span
+                            className="shrink-0 w-1.5 h-1.5 rounded-full mt-1.5"
+                            style={{ background: "#EC4899" }}
+                          />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Skills + Certificate Action */}
+                    <div className="flex flex-wrap items-center justify-between gap-2 pt-2">
+                      <div className="flex flex-wrap gap-1.5">
+                        {exp.skills?.map((skill) => (
+                          <span
+                            key={skill}
+                            className="text-[0.62rem] font-mono px-2 py-0.5 rounded bg-white/[0.03] text-purple-200/80 border border-white/5"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+
+                      {exp.certificateImage && (
+                        <button
+                          onClick={() => {
+                            setSelectedCert({
+                              title: `${exp.company} — ${exp.role}`,
+                              issuer: exp.company,
+                              date: exp.period,
+                              credentialId: exp.badge,
+                              image: exp.certificateImage,
+                              pdf: exp.certificatePdf,
+                              url: "https://linkedin.com/in/sneha-rudani",
+                            });
+                          }}
+                          className="inline-flex items-center gap-1 text-[0.65rem] font-semibold px-2.5 py-1 rounded-full bg-pink-500/10 hover:bg-pink-500/20 text-pink-300 border border-pink-500/30 transition-colors"
+                        >
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                          </svg>
+                          View Credential
+                        </button>
+                      )}
                     </div>
                   </div>
-
-                  <ul className="space-y-2 pt-1">
-                    {exp.bullets.map((bullet, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start gap-2.5 text-xs leading-relaxed"
-                        style={{ color: "#9D8BAA" }}
-                      >
-                        <span
-                          className="shrink-0 w-1.5 h-1.5 rounded-full mt-1.5"
-                          style={{ background: "#EC4899" }}
-                        />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
