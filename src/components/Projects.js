@@ -10,7 +10,7 @@ const projects = [
     summary:
       "High-performance Event Management Platform built with Django and REST Framework. Features QR-code digital ticket passes, modern dark glassmorphism UI, and host moderation workflow.",
     tags: ["Django", "REST API", "SQLite", "Render"],
-    image: "/wiwi-events.webp", // Add your screenshot here
+    image: "/wiwi-events.png",
     github: "https://github.com/Nehaa2509/Event_Management_System.git",
     demo: "https://wiwievents.onrender.com",
     accent: "#6366F1",
@@ -24,7 +24,7 @@ const projects = [
     summary:
       "Production Django app featuring OTP email registration, role-based dashboards (Patient/Doctor/Admin), Cashfree payment gateway integration (UPI flow), downloadable PDF prescriptions via ReportLab, and Chart.js analytics. Deployed on Render.",
     tags: ["Django", "SQLite", "REST API", "ReportLab", "Cashfree", "Render"],
-    image: "/vitalbook.webp",
+    image: "/vitalbook.png",
     github: "https://github.com/Nehaa2509/VitalBook",
     demo: "https://vitalbook-1.onrender.com/",
     accent: "#F97316",
