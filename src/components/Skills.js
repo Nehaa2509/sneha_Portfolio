@@ -77,6 +77,18 @@ const experiences = [
     ],
   },
   {
+    role: "Python Developer Trainee",
+    company: "Software Education",
+    period: "Jan 2026 – Apr 2026",
+    location: "Nikol, Ahmedabad (On-site)",
+    badge: "Certified Internship",
+    bullets: [
+      "Delivered backend logic and data-handling scripts in Python using OOP design.",
+      "Optimized script execution efficiency and documented workflows for team handoff.",
+      "Successfully completed full 3-month on-site development training with verified certificate.",
+    ],
+  },
+  {
     role: "Data Science Intern",
     company: "CloudThat Technologies",
     period: "June 2025 – July 2025",
@@ -102,6 +114,26 @@ const experiences = [
 ];
 
 const certifications = [
+  {
+    title: "Python Developer Internship Certificate",
+    issuer: "Software Education, Nikol — Ahmedabad",
+    date: "April 2026",
+    credentialId: "Software Education Verified",
+    description: "Certificate of Internship in recognition of outstanding efforts as Python Developer (Jan 1, 2026 to Apr 1, 2026)",
+    image: "/certificates/software-education-internship.png",
+    url: "https://linkedin.com/in/sneha-rudani",
+    badge: "Internship Letter",
+  },
+  {
+    title: "Python Programming Certificate (Grade A)",
+    issuer: "Software Education, Nikol — Ahmedabad",
+    date: "28 Feb 2026",
+    credentialId: "Govt Reg: GJ01D0040370 | Sn: 262640",
+    description: "Completed 30 Hours of Python Programming at Software Education with Grade A Distinction",
+    image: "/certificates/python-software-education.png",
+    url: "https://linkedin.com/in/sneha-rudani",
+    badge: "Grade A Certified",
+  },
   {
     title: "Microsoft Data & AI Internship Certificate",
     issuer: "Microsoft & CloudThat",
@@ -136,23 +168,14 @@ const certifications = [
     badge: "GTU / CSRBOX",
   },
   {
-    title: "Elevate Labs AI & ML Certificate",
-    issuer: "MSME Govt. of India & Skill India",
-    date: "April 2026",
-    credentialId: "MSME / Skill India Verified",
-    description: "Comprehensive practical training in Machine Learning algorithms & applied AI",
+    title: "Elevate Labs AI & ML Internship Certificate",
+    issuer: "Elevate Labs (MSME & Skill India)",
+    date: "30 April 2026",
+    credentialId: "MSME & Skill India Recognized",
+    description: "Certificate of Completion for Artificial Intelligence & Machine Learning Internship Program (1 Jan 2026 to 30 Apr 2026)",
+    image: "/certificates/elevate-labs-ai-ml.png",
     url: "https://linkedin.com/in/sneha-rudani",
-    badge: "MSME Skill India",
-  },
-  {
-    title: "Python Programming Certificate (Grade A)",
-    issuer: "Software Education, Nikol — Ahmedabad",
-    date: "28 Feb 2026",
-    credentialId: "Govt Reg: GJ01D0040370 | Sn: 262640",
-    description: "Completed 30 Hours of Python Programming at Software Education with Grade A Distinction",
-    image: "/certificates/python-software-education.png",
-    url: "https://linkedin.com/in/sneha-rudani",
-    badge: "Grade A Certified",
+    badge: "MSME / Skill India",
   },
   {
     title: "QSkill Virtual Internship Certificate",
@@ -322,7 +345,7 @@ export default function Skills() {
                 </h3>
               </div>
               <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-pink-500/10 text-pink-400 border border-pink-500/20">
-                3 Roles Completed
+                4 Roles Completed
               </span>
             </div>
 
