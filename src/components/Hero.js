@@ -226,12 +226,12 @@ export default function Hero() {
               className="opacity-0 animate-fade-up-d1 max-w-xl leading-relaxed font-light"
               style={{
                 color: "#9D8BAA",
-                fontSize: "1.1rem",
+                fontSize: "1.08rem",
                 fontFamily: "var(--font-outfit), sans-serif",
               }}
             >
-              B.E. Information Technology graduate (CGPA 8.61) with hands-on backend
-              development experience in Python, Django REST Framework, JWT authentication, and ML models.
+              I don&apos;t just study backend development — <span className="text-white font-medium">I ship it</span>. 
+              Building and deploying live production applications in Python &amp; Django REST Framework with real payment flows, JWT auth, and robust architecture. Ready to tackle mission-critical backend problems from day one.
             </p>
 
             {/* CTA Buttons */}
