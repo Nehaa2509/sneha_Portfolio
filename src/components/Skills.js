@@ -178,13 +178,15 @@ const certifications = [
     badge: "MSME / Skill India",
   },
   {
-    title: "QSkill Virtual Internship Certificate",
-    issuer: "Back-End Development Certificate",
-    date: "July 2026",
+    title: "QSkill Backend Development Certificate",
+    issuer: "QSkill & SR INDIA (#startupindia)",
+    date: "03 July 2026",
     credentialId: "ID: qspybknd260601",
-    description: "Back-End Development specialization with practical application modules",
+    description: "Certificate of Completion for QSkill Virtual Internship Program in Back-End Development (1st June to 1st July 2026)",
+    image: "/certificates/qskill-backend-internship.png",
+    pdf: "/certificates/qskill-backend-internship.pdf",
     url: "https://linkedin.com/in/sneha-rudani",
-    badge: "Backend Certified",
+    badge: "QSkill / ISO Certified",
   },
 ];
 
