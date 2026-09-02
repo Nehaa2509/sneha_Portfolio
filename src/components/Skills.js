@@ -146,12 +146,13 @@ const certifications = [
   },
   {
     title: "Python Programming Certificate (Grade A)",
-    issuer: "Software Education, Nikol",
-    date: "Feb 2026",
-    credentialId: "Govt Reg: GJ01D0040370",
-    description: "Certified Python Core & Object-Oriented Programming with Grade A Distinction",
+    issuer: "Software Education, Nikol — Ahmedabad",
+    date: "28 Feb 2026",
+    credentialId: "Govt Reg: GJ01D0040370 | Sn: 262640",
+    description: "Completed 30 Hours of Python Programming at Software Education with Grade A Distinction",
+    image: "/certificates/python-software-education.png",
     url: "https://linkedin.com/in/sneha-rudani",
-    badge: "Grade A",
+    badge: "Grade A Certified",
   },
   {
     title: "QSkill Virtual Internship Certificate",
