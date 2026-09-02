@@ -42,8 +42,11 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${syne.variable} ${outfit.variable} antialiased`}
+      suppressHydrationWarning
     >
-      <body className="grain min-h-screen flex flex-col">{children}</body>
+      <body className="grain min-h-screen flex flex-col" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }
