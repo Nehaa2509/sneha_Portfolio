@@ -1,5 +1,8 @@
 "use client";
 
+import { useState } from "react";
+import Image from "next/image";
+
 /* ──────────────────────────────────────────────────────────
    SKILLS & EXPERIENCE — Bento Grid, Detailed Internships & Certifications
    ────────────────────────────────────────────────────────── */
@@ -23,123 +26,147 @@ const skillGroups = [
     title: "AI & Machine Learning (Secondary)",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
       </svg>
     ),
     iconBg: "rgba(192,132,252,0.15)",
     iconBorder: "rgba(192,132,252,0.25)",
     iconColor: "#C084FC",
-    skills: ["Scikit-learn", "Pandas", "NumPy", "KNN", "Decision Trees", "Random Forest", "NLP", "Gemini API"],
+    skills: ["Google Gemini API", "Scikit-Learn", "Machine Learning (KNN, Random Forest)", "Pandas", "NumPy", "Text-to-Speech / STT"],
     span: "col-span-2",
-    featured: false,
+  },
+  {
+    title: "Backend & Systems Architecture",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.75 5.1a1.5 1.5 0 011.2-.6h10.1a1.5 1.5 0 011.2.6l1.6 3.45a4.5 4.5 0 01.9 2.7" />
+      </svg>
+    ),
+    iconBg: "rgba(99,102,241,0.15)",
+    iconBorder: "rgba(99,102,241,0.25)",
+    iconColor: "#6366F1",
+    skills: ["RESTful API Design", "JWT Authentication", "Role-Based Access (RBAC)", "Database ORM", "Payment Gateways (Cashfree, Razorpay)", "ReportLab PDF Engine"],
+    span: "col-span-2",
   },
   {
     title: "Tools & Deployment",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.42 5.42a2.12 2.12 0 01-3-3l5.42-5.42m4.58-4.58l5.42-5.42a2.12 2.12 0 013 3l-5.42 5.42M7.5 7.5l9 9" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.07a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091.458.118.93.078 1.385" />
       </svg>
     ),
-    iconBg: "rgba(34,211,238,0.15)",
-    iconBorder: "rgba(34,211,238,0.25)",
-    iconColor: "#22D3EE",
-    skills: ["Git", "GitHub", "Render", "JWT Auth", "REST APIs", "ReportLab", "Chart.js"],
-    span: "",
-    featured: false,
-  },
-  {
-    title: "Education",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147L12 14.6l7.74-4.453a.75.75 0 000-1.294L12 4.4 4.26 8.853a.75.75 0 000 1.294zM4.5 13.063v3.187a.75.75 0 00.384.654l6.75 3.75a.75.75 0 00.732 0l6.75-3.75a.75.75 0 00.384-.654v-3.187" />
-      </svg>
-    ),
-    iconBg: "rgba(251,191,36,0.15)",
-    iconBorder: "rgba(251,191,36,0.25)",
-    iconColor: "#FBBF24",
-    skills: ["B.E. IT", "CGPA: 8.61", "GTU"],
-    span: "",
-    featured: false,
+    iconBg: "rgba(244,114,182,0.15)",
+    iconBorder: "rgba(244,114,182,0.25)",
+    iconColor: "#F472B6",
+    skills: ["Git & GitHub", "VS Code", "Postman", "Render Cloud Hosting", "Gunicorn / WSGI", "Virtualenv"],
+    span: "col-span-2",
   },
 ];
 
 const experiences = [
   {
-    role: "Backend Developer Intern",
-    company: "QSkill",
+    role: "Python & Django Developer Intern",
+    company: "Wiwi Tech Pvt Ltd",
+    period: "Jan 2026 – Present",
+    location: "Ahmedabad, India",
+    badge: "Active Internship",
+    bullets: [
+      "Engineered backend REST APIs for the Wiwi Events platform using Django REST Framework (DRF), structuring database ORM models and schema migrations.",
+      "Implemented JWT authentication, QR-code digital ticket pass verification, and host approval moderation workflows.",
+      "Collaborated on frontend UI integration using glassmorphic dark-theme design patterns.",
+    ],
+  },
+  {
+    role: "Data Science Intern",
+    company: "CloudThat Technologies",
+    period: "June 2025 – July 2025",
     location: "Remote",
-    period: "June – July 2026",
-    badge: "Back-End Certified",
+    badge: "Microsoft Data & AI Program",
     bullets: [
-      "Developed a Django job-listing application — models, views, and session-based authentication — independently from a task brief.",
-      "Completed a Django event-registration application as a second assigned task, covering core CRUD functionality.",
+      "Completed 78 hours of skill-based training under the Microsoft Data & AI Internship Program 2025.",
+      "Conducted exploratory data analysis (EDA), data cleaning, and preprocessing with Pandas & NumPy.",
+      "Trained and evaluated classification models (Logistic Regression, KNN, Random Forest) for predictive metrics comparison.",
     ],
   },
   {
-    role: "Python Developer Trainee",
-    company: "Software Education",
-    location: "Nikol, Ahmedabad (Part-time, On-site)",
-    period: "Jan – Apr 2026",
-    badge: "Grade A Certified",
+    role: "AI Intern",
+    company: "CSRBOX Foundation & GTU",
+    period: "July 2025",
+    location: "Ahmedabad, India",
+    badge: "Summer GTU Program",
     bullets: [
-      "Developed backend logic and data-handling scripts in Python using OOP principles.",
-      "Optimised script execution efficiency and documented technical workflows for handoff.",
-    ],
-  },
-  {
-    role: "AI & Machine Learning Intern",
-    company: "Elevate Labs",
-    location: "Bengaluru (Part-time, Remote)",
-    period: "Jan – Apr 2026",
-    badge: "MSME & Skill India Certified",
-    bullets: [
-      "Self-paced, task-based remote internship run concurrently with an on-site evening internship.",
-      "MSME Ministry of India recognised | Skill India certified.",
-      "Executed end-to-end ML workflows — data preprocessing, feature engineering, model training, and evaluation — using Scikit-learn, Pandas, and NumPy.",
-      "Improved model accuracy through cross-validation and hyperparameter tuning; documented reproducible experiment pipelines.",
+      "Engaged in hands-on AI problem-solving workshops and machine learning model training as part of the Gujarat Technological University summer initiative.",
+      "Delivered a real-world applied AI project prototype with structured documentation and metrics.",
     ],
   },
 ];
 
 const certifications = [
   {
+    title: "Microsoft Data & AI Internship Certificate",
+    issuer: "Microsoft & CloudThat",
+    date: "July 2025",
+    credentialId: "Cert No: CT/25/945742",
+    description: "78 Hours of Skill-Based Training under Microsoft Data & AI Internship Program 2025",
+    image: "/certificates/microsoft-data-ai.png",
+    pdf: "/certificates/microsoft-data-ai.pdf",
+    url: "https://linkedin.com/in/sneha-rudani",
+    badge: "Microsoft Verified",
+  },
+  {
+    title: "Internal Smart India Hackathon 2025",
+    issuer: "MoE's Innovation Cell, AICTE & Apollo Institute",
+    date: "Sept 2025",
+    credentialId: "SIH 2025 Participant",
+    description: "Certificate of Participation in Internal Smart India Hackathon 2025",
+    image: "/certificates/smart-india-hackathon.png",
+    pdf: "/certificates/smart-india-hackathon.pdf",
+    url: "https://linkedin.com/in/sneha-rudani",
+    badge: "SIH / AICTE",
+  },
+  {
+    title: "Summer GTU AI Internship Certificate",
+    issuer: "CSRBOX Foundation & GTU",
+    date: "July 2025",
+    credentialId: "ID: CSRBOX2025AI1060",
+    description: "2-week Summer GTU Internship Program on Artificial Intelligence (Subject code: 3170001)",
+    image: "/certificates/csrbox-ai-internship.png",
+    pdf: "/certificates/csrbox-ai-internship.pdf",
+    url: "https://linkedin.com/in/sneha-rudani",
+    badge: "GTU / CSRBOX",
+  },
+  {
     title: "Elevate Labs AI & ML Certificate",
     issuer: "MSME Govt. of India & Skill India",
     date: "April 2026",
     credentialId: "MSME / Skill India Verified",
+    description: "Comprehensive practical training in Machine Learning algorithms & applied AI",
     url: "https://linkedin.com/in/sneha-rudani",
-  },
-  {
-    title: "Microsoft Data & AI Training",
-    issuer: "CloudThat — Azure AI & Data Pipelines",
-    date: "July 2025",
-    credentialId: "Cert No: CT/25/945742",
-    url: "https://linkedin.com/in/sneha-rudani",
-  },
-  {
-    title: "AI & Problem-Solving Certificate",
-    issuer: "CSRBOX & GTU Summer Program",
-    date: "July 2025",
-    credentialId: "ID: CSRBOX2025AI1060",
-    url: "https://linkedin.com/in/sneha-rudani",
+    badge: "MSME Skill India",
   },
   {
     title: "Python Programming Certificate (Grade A)",
     issuer: "Software Education, Nikol",
     date: "Feb 2026",
     credentialId: "Govt Reg: GJ01D0040370",
+    description: "Certified Python Core & Object-Oriented Programming with Grade A Distinction",
     url: "https://linkedin.com/in/sneha-rudani",
+    badge: "Grade A",
   },
   {
     title: "QSkill Virtual Internship Certificate",
     issuer: "Back-End Development Certificate",
     date: "July 2026",
     credentialId: "ID: qspybknd260601",
+    description: "Back-End Development specialization with practical application modules",
     url: "https://linkedin.com/in/sneha-rudani",
+    badge: "Backend Certified",
   },
 ];
 
 export default function Skills() {
+  const [selectedCert, setSelectedCert] = useState(null);
+
   return (
     <section id="about" className="py-28 px-6 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto space-y-20">
@@ -344,7 +371,7 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Certifications & LinkedIn Verification List */}
+          {/* Certifications & Credentials List */}
           <div className="glass rounded-2xl p-7 space-y-6 reveal border border-white/10 flex flex-col justify-between">
             <div className="space-y-5">
               <div className="flex items-center justify-between gap-3">
@@ -371,37 +398,79 @@ export default function Skills() {
                 </a>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3.5">
                 {certifications.map((cert) => (
-                  <a
+                  <div
                     key={cert.title}
-                    href={cert.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group block p-3.5 rounded-xl border transition-all duration-200 hover:border-pink-500/50 hover:bg-pink-500/5"
+                    onClick={() => {
+                      if (cert.image || cert.pdf) setSelectedCert(cert);
+                    }}
+                    className={`group p-4 rounded-xl border transition-all duration-200 ${
+                      cert.image || cert.pdf
+                        ? "cursor-pointer hover:border-pink-500/60 hover:bg-pink-500/5 shadow-sm hover:shadow-pink-500/10"
+                        : "hover:border-purple-500/40 hover:bg-white/[0.02]"
+                    }`}
                     style={{
-                      background: "rgba(13,9,20,0.5)",
-                      borderColor: "rgba(45,31,63,0.5)",
+                      background: "rgba(13,9,20,0.6)",
+                      borderColor: cert.image ? "rgba(236,72,153,0.25)" : "rgba(45,31,63,0.5)",
                     }}
                   >
-                    <div className="flex justify-between items-start gap-2">
-                      <h4 className="font-semibold text-white text-xs group-hover:text-pink-400 transition-colors">
-                        {cert.title}
-                      </h4>
-                      <span className="text-[0.65rem] font-mono shrink-0 px-2 py-0.5 rounded bg-white/5 text-purple-300">
+                    <div className="flex justify-between items-start gap-3">
+                      <div className="space-y-1 flex-1">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h4 className="font-semibold text-white text-xs group-hover:text-pink-400 transition-colors">
+                            {cert.title}
+                          </h4>
+                          {cert.image && (
+                            <span className="inline-flex items-center gap-1 text-[0.6rem] font-semibold px-2 py-0.5 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30">
+                              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                              </svg>
+                              View Certificate
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-[0.72rem]" style={{ color: "#9D8BAA" }}>
+                          {cert.issuer}
+                        </p>
+                      </div>
+
+                      <span className="text-[0.65rem] font-mono shrink-0 px-2 py-0.5 rounded bg-white/5 text-purple-300 border border-white/5">
                         {cert.date}
                       </span>
                     </div>
-                    <p className="text-[0.72rem] mt-1" style={{ color: "#9D8BAA" }}>
-                      {cert.issuer}
-                    </p>
-                    <div className="flex items-center justify-between gap-2 mt-2 pt-1.5 border-t border-white/5 text-[0.68rem]">
-                      <span className="text-pink-400 font-mono">{cert.credentialId}</span>
-                      <span className="text-purple-300 group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
-                        Verify on LinkedIn →
+
+                    <div className="flex items-center justify-between gap-2 mt-2.5 pt-2 border-t border-white/5 text-[0.68rem]">
+                      <span className="text-pink-400 font-mono text-[0.65rem] truncate max-w-[200px]">
+                        {cert.credentialId}
                       </span>
+
+                      <div className="flex items-center gap-2">
+                        {cert.pdf && (
+                          <a
+                            href={cert.pdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-pink-300 hover:text-pink-200 transition-colors font-medium flex items-center gap-1"
+                            title="Open PDF"
+                          >
+                            PDF ↗
+                          </a>
+                        )}
+                        <a
+                          href={cert.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-purple-300 hover:text-purple-200 transition-colors inline-flex items-center gap-1"
+                        >
+                          LinkedIn →
+                        </a>
+                      </div>
                     </div>
-                  </a>
+                  </div>
                 ))}
               </div>
             </div>
@@ -421,6 +490,100 @@ export default function Skills() {
           </div>
         </div>
       </div>
+
+      {/* ── Certificate Preview Modal ────────────────────────────── */}
+      {selectedCert && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in"
+          onClick={() => setSelectedCert(null)}
+        >
+          <div
+            className="relative w-full max-w-3xl glass rounded-3xl p-6 border-2 border-pink-500/40 shadow-2xl overflow-hidden space-y-5"
+            style={{
+              background: "rgba(13,9,20,0.95)",
+              boxShadow: "0 25px 60px -15px rgba(236,72,153,0.3)",
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <span className="text-xs font-mono uppercase tracking-wider text-pink-400 font-semibold">
+                  Verified Certificate
+                </span>
+                <h3
+                  className="text-lg md:text-xl font-bold text-white mt-0.5"
+                  style={{ fontFamily: "var(--font-syne), sans-serif" }}
+                >
+                  {selectedCert.title}
+                </h3>
+                <p className="text-xs text-purple-300/80 mt-0.5">
+                  Issued by {selectedCert.issuer} • {selectedCert.date}
+                </p>
+              </div>
+
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedCert(null)}
+                className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white transition-colors"
+                aria-label="Close modal"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Certificate Image Preview */}
+            {selectedCert.image && (
+              <div className="relative aspect-[16/11] w-full rounded-2xl overflow-hidden border border-white/10 bg-black/40 shadow-inner">
+                <Image
+                  src={selectedCert.image}
+                  alt={selectedCert.title}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  priority
+                />
+              </div>
+            )}
+
+            {/* Modal Footer / Actions */}
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-white/10">
+              <span className="text-xs font-mono text-pink-400">
+                {selectedCert.credentialId}
+              </span>
+
+              <div className="flex items-center gap-3">
+                {selectedCert.pdf && (
+                  <a
+                    href={selectedCert.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-colors"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                    </svg>
+                    Download / Open PDF
+                  </a>
+                )}
+                <a
+                  href={selectedCert.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-semibold bg-pink-600 hover:bg-pink-500 text-white transition-colors shadow-lg shadow-pink-600/30"
+                >
+                  Verify on LinkedIn
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M4 12L12 4M12 4H7M12 4v5"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
